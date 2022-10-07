@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="form form1">
+        <div class="info">
+            <input type="text" name="" id="3" [value]="valTwo" (input)="messageTwo($any($event.target).value)">
+            <select #c1 name="" id="2" (mouseleave)="setVal(c1.value)">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="BTC">BTC</option>
+            </select>
+        </div>
+        <div class="text">Converte to</div>
+        <div class="info">
+            <select name="" id="2">
+                <option value="UAH">UAH</option>
+            </select>
+            <input type="text" id="1" [value]="valOne" (input)="messageOne($any($event.target).value)">
+        </div>
+    </div>
+</div>

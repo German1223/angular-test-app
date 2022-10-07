@@ -1,0 +1,28 @@
+.container{;
+    background-color: #00112c;
+    display:flex;
+    justify-content:center;
+    height:100vh;
+}
+.form{
+    background-color: black;
+    height: 150px;
+    width: 70%;
+    border-radius:15px;
+    pading:15px;
+    display:flex;
+    justify-content:center;
+    position:abslolute;
+    margin-top:10%;
+    
+}
+
+.info{
+    margin-top:6%;
+}
+.text{
+    color: white;
+    margin-top:6%;
+    margin-left:10px;
+    margin-right:10px;
+}
