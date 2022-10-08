@@ -1,6 +1,26 @@
 <div class="container">
+    <div>
+        <form [formGroup]="excForm">
+            <input formControlName="exchange">
+            <select  formControlName="firstSelect" id="2">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="BTC">BTC</option>
+            </select>
+            <span class="text">Converte to </span>
+            <select>
+                <option value="UAH">UAH</option>
+            </select>
+            <input formControlName="toExc" [value]="valTwo">
+        </form>
+    </div>
+</div>
+
+<!-- <div class="container">
     <div class="form form1">
+        <form action=""></form>
         <div class="info">
+
             <input type="text" name="" id="3" [value]="valTwo" (input)="messageTwo($any($event.target).value)">
             <select #c1 name="" id="2" (mouseleave)="setVal(c1.value)">
                 <option value="USD">USD</option>
@@ -15,5 +35,6 @@
             </select>
             <input type="text" id="1" [value]="valOne" (input)="messageOne($any($event.target).value)">
         </div>
+        </form>
     </div>
-</div>
+</div> -->
