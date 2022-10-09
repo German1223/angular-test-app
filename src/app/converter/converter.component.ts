@@ -13,6 +13,10 @@ export class ConverterComponent {
     exchange: new FormControl(),
     toExc: new FormControl(),
     firstSelect: new FormControl(),
+    uahExc: new FormControl(),
+    secondToExc: new FormControl(),
+    secondSelect: new FormControl(),
+
   })
   valOne: number = 0;
   valTwo: number = 0;
@@ -32,24 +36,45 @@ export class ConverterComponent {
     })
   }
   setVal() {
-    const toExcVal = this.excForm.get('exchange')!.value
-    const selVal = this.excForm.get('firstSelect')!.value
-    const secondVal = this.excForm.get('toExc')!.value
+    const firstVal = this.excForm.get('exchange')!.value
+    const selValOne = this.excForm.get('firstSelect')!.value
 
-    if (selVal === "USD") {
-      let res = toExcVal * this.USD;
+    const secondVal = this.excForm.get('uahExc')!.value
+    const selValTwo = this.excForm.get('secondSelect')!.value
+    
+
+    if (selValOne === "USD") {
+      let res = firstVal * this.USD;
       this.excForm.patchValue({ toExc: res })
     }
 
-    if (selVal === "EUR") {
-      let res = toExcVal * this.EUR;
+    if (selValOne === "EUR") {
+      let res = firstVal * this.EUR;
       this.excForm.patchValue({ toExc: res })
     }
 
-    if (selVal === "BTC") {
-      let res = toExcVal * this.BTC;
+    if (selValOne === "BTC") {
+      let res = firstVal * this.BTC;
       this.excForm.patchValue({ toExc: res })
     }
+
+    //second form
+
+    if (selValTwo === "USD") {
+      let res = secondVal / this.USD;
+      this.excForm.patchValue({ secondToExc: res })
+    }
+
+    if (selValTwo === "EUR") {
+      let res = secondVal / this.EUR;
+      this.excForm.patchValue({ secondToExc: res })
+    }
+
+    if (selValTwo === "BTC") {
+      let res = secondVal / this.BTC;
+      this.excForm.patchValue({ secondToExc: res })
+    }
+    
   }
 
 

@@ -12,6 +12,20 @@
                 <option value="UAH">UAH</option>
             </select>
             <input formControlName="toExc">
+
+            <div></div>
+
+            <input formControlName="uahExc">
+            <select>
+                <option value="UAH">UAH</option>
+            </select>
+            <span class="text">Converte to </span>
+            <select  formControlName="secondSelect">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="BTC">BTC</option>
+            </select>
+            <input formControlName="secondToExc">
             <div class="button">
             <button (click)="setVal()"> Converte </button>
             </div>
